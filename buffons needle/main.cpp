@@ -42,8 +42,8 @@ int main(int argc, char *argv[])
         // координата (0, 0) не подходит, так как от неё считаем направление
         while (((x == 0) && (y == 0)) || (x * x + y * y > (radius * radius)))
         {
-            x = coords(gen);
-            y = coords(gen);
+            x = radius - coords(gen);
+            y = radius - coords(gen);
         }
         // Упала вертикально, но middle != 0
         if (x == 0) continue;
